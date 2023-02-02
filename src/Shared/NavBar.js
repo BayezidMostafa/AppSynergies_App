@@ -11,15 +11,12 @@ const NavBar = () => {
   return (
     <div>
       <Head>
-        <title>Create Next Responsive Navbar With Tailwind CSS</title>
-        <meta
-          name="description"
-          content="Create Next JS Responsive Menu with Tailwind CSS"
-        />
+        <title></title>
+        <meta name="" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className="w-full bg-gray-800 shadow relative">
-        <div className="justify-between mx-auto px-6 md:px-10 md:items-center flex py-3 md:py-6 transition-all ease-in duration-500">
+      <nav className="w-full shadow relative">
+        <div className="justify-between mx-auto px-3 md:px-5 md:items-center flex py-3 md:py-6 transition-all ease-in duration-500">
           <div className="flex justify-center items-center gap-3">
             <Link href={``}>
               <Image src={Logo} alt="Main Logo" />
@@ -28,26 +25,26 @@ const NavBar = () => {
               <Image src={Company_Name} alt="company_name" />
             </Link>
           </div>
-          <ul className="items-center justify-center space-y-8 md:flex hidden md:space-x-16 text-[16px] md:space-y-0">
-            <li className="text-white">
+          <ul className="items-center justify-center space-y-8 md:flex hidden space-x-0 md:space-x-1 lg:space-x-10 text-[16px] md:space-y-0">
+            <li className="text-black">
               <Link href="/">Services</Link>
             </li>
-            <li className="text-white">
+            <li className="text-black">
               <Link href="/blogs">Our Apps</Link>
             </li>
-            <li className="text-white">
+            <li className="text-black">
               <Link href="/about">Industries</Link>
             </li>
-            <li className="text-white">
+            <li className="text-black">
               <Link href="/contact">About</Link>
             </li>
-            <li className="text-white">
+            <li className="text-black">
               <Link href="/contact">Careers</Link>
             </li>
             <li>
               <Link
                 href={``}
-                className="text-white border p-4 hover:border-[#BD996A] hover:bg-[#BD996A]"
+                className="text-black border border-black md:p-2 lg:p-4 hover:border-[#BD996A] hover:bg-[#BD996A]"
               >
                 Estimate Projects
               </Link>
@@ -93,7 +90,7 @@ const NavBar = () => {
             <div
               className={`${
                 !navbar ? "hidden" : "flex"
-              } absolute w-[90%] h-screen top-[64px] right-0 z-10 bg-white sidebar shadow-lg`}
+              } absolute w-[90%] h-screen top-[72px] right-0 z-10 bg-white sidebar shadow-lg`}
             >
               <ul className="items-center w-[100%] pt-10 flex gap-3 flex-col">
                 <li className="text-black text-3xl">Menu</li>
