@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import Logo from "../Assets/logo.png";
 import Company_Name from "../Assets/company_name.png";
 import Image from "next/image";
+import Modal from "@/Components/Modal";
 
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   return (
     <div>
@@ -41,7 +43,7 @@ const NavBar = () => {
             <li className="text-black">
               <Link href="/contact">Careers</Link>
             </li>
-            <li>
+            <li onClick={() => setShowModal(true)}>
               <Link
                 href={``}
                 className="text-black border border-black md:p-2 lg:p-4 hover:border-[#BD996A] hover:bg-[#BD996A]"
@@ -50,6 +52,7 @@ const NavBar = () => {
               </Link>
             </li>
           </ul>
+          <Modal isVisible={showModal} onClose={() => setShowModal(false)} />
           <div className="md:hidden flex">
             <div className="md:hidden">
               <button
