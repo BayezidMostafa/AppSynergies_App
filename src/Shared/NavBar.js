@@ -32,16 +32,16 @@ const NavBar = () => {
               <Link href="/">Services</Link>
             </li>
             <li className="text-black">
-              <Link href="/blogs">Our Apps</Link>
+              <Link href="/ourblogs">Our Apps</Link>
             </li>
             <li className="text-black">
-              <Link href="/about">Industries</Link>
+              <Link href="/industries">Industries</Link>
             </li>
             <li className="text-black">
-              <Link href="/contact">About</Link>
+              <Link href="/about">About</Link>
             </li>
             <li className="text-black">
-              <Link href="/contact">Careers</Link>
+              <Link href="/careers">Careers</Link>
             </li>
             <li onClick={() => setShowModal(true)}>
               <Link
