@@ -25,29 +25,52 @@ const Form = () => {
     }
   };
 
+  const handleInputData = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    console.log(name);
+  };
+
   return (
-    <div>
+    <div className="p-10">
       <div className="">Progres bar</div>
-      <div className="">
-        <div>{heading[page]}</div>
-        <div>{PageDisplay()}</div>
-        <div className="flex gap-2">
-          <button
-            disabled={page === 0}
-            className="bg-black text-white"
-            onClick={() => setPage((currentPage) => currentPage - 1)}
-          >
-            Prev
-          </button>
-          <button
-            disabled={page === heading.length - 1}
-            className="bg-black text-white"
-            onClick={() => setPage((currentPage) => currentPage + 1)}
-          >
-            Next
-          </button>
-        </div>
+      <div>
+        <p className="text-[24px] my-5">{heading[page]}</p>
       </div>
+      <form id="myform" onSubmit={handleInputData} className="">
+        <div>{PageDisplay()}</div>
+        <div className="flex gap-2 mt-5">
+          {page !== 0 && (
+            <button
+              className="bg-white border text-black px-5 py-4 rounded-full"
+              onClick={() => setPage((currentPage) => currentPage - 1)}
+            >
+              Prev
+            </button>
+          )}
+          {page === heading.length - 1 ? (
+            <>
+              <button
+                type="submit"
+                className="bg-black text-white px-5 py-4 rounded-full"
+              >
+                Submit
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                type="submit"
+                className="bg-black text-white px-5 py-4 rounded-full"
+                onClick={() => setPage((currentPage) => currentPage + 1)}
+              >
+                Continue
+              </button>
+            </>
+          )}
+        </div>
+      </form>
     </div>
   );
 };
