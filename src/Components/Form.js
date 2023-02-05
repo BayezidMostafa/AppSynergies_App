@@ -29,12 +29,25 @@ const Form = () => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
-    console.log(name);
   };
 
   return (
     <div className="p-10">
-      <div className="">Progres bar</div>
+      <div className="w-full bg-gray-200 h-2 rounded">
+        <div
+          style={{
+            width:
+              page === 0
+                ? "25%"
+                : page === 1
+                ? "50%"
+                : page === 2
+                ? "75%"
+                : "100%",
+          }}
+          className={`bg-[#ecc59d] h-full rounded transition-all duration-500 ease-in`}
+        ></div>
+      </div>
       <div>
         <p className="text-[24px] my-5">{heading[page]}</p>
       </div>

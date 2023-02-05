@@ -8,7 +8,7 @@ const TellUs = () => {
         are using or would like to introduce? How can we help you?
       </p>
       <textarea
-        className="w-full lg:w-[50%] xl:w-[40%] p-3 rounded border-2 border-black mt-5"
+        className="w-full lg:w-[50%] xl:w-[40%] p-3 rounded border-2 border-black mt-5 h-[150px]"
         placeholder="Please leave your message and continue"
       />
     </div>
