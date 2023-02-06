@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Help = () => {
+const Step_Two = () => {
   const [value, setValue] = useState(false);
   const handleClick = (e) => {
     e.target.classList.toggle("bg-[#BD996A]");
@@ -54,4 +54,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default Step_Two;

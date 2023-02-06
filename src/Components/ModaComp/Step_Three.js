@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SpecificTech = () => {
+const Step_Three = () => {
   const [value, setValue] = useState(false);
   const handleClick = (e) => {
     e.target.classList.toggle("bg-[#BD996A]");
@@ -64,4 +64,4 @@ const SpecificTech = () => {
   );
 };
 
-export default SpecificTech;
+export default Step_Three;

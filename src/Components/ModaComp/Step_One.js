@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const MainChallenge = () => {
+const Step_One = () => {
   const [value, setValue] = useState(false);
   const handleClick = (e) => {
     e.target.classList.toggle("bg-[#BD996A]");
@@ -54,4 +54,4 @@ const MainChallenge = () => {
   );
 };
 
-export default MainChallenge;
+export default Step_One;

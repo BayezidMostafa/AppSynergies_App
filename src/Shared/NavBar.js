@@ -21,7 +21,7 @@ const NavBar = () => {
             !scroll ? "bg-transparent" : "backdrop-blur-md bg-white "
           } fixed top-0 transition-all duration-500`}
         >
-          <div className="justify-between mx-auto px-3 md:px-5 md:items-center flex py-3 md:py-6 transition-all ease-in duration-500">
+          <div className="justify-between mx-auto px-3 md:px-5 md:items-center flex py-3 md:py-6 transition-all ease-in duration-300">
             <div className="flex justify-center items-center gap-3">
               <Link href={``}>
                 <Image src={Logo} alt="Main Logo" />

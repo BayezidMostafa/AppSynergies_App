@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Help from "./ModaComp/Help";
-import MainChallenge from "./ModaComp/MainChallenge";
-import SpecificTech from "./ModaComp/SpecificTech";
-import TellUs from "./ModaComp/TellUs";
+import { HiChevronLeft } from "react-icons/hi";
+import Step_Five from "./ModaComp/Step_Five";
+import Step_Four from "./ModaComp/Step_Four";
+import Step_One from "./ModaComp/Step_One";
+import Step_Three from "./ModaComp/Step_Three";
+import Step_Two from "./ModaComp/Step_Two";
 
 const Form = () => {
   const [page, setPage] = useState(0);
@@ -11,17 +13,20 @@ const Form = () => {
     "What can we help you with?",
     "Are there any specific technologies you are looking for?",
     "Tell us more about your project",
+    "Great! you are almost done",
   ];
 
   const PageDisplay = () => {
     if (page === 0) {
-      return <MainChallenge />;
+      return <Step_One />;
     } else if (page === 1) {
-      return <Help />;
+      return <Step_Two />;
     } else if (page === 2) {
-      return <SpecificTech />;
+      return <Step_Three />;
+    } else if (page === 3) {
+      return <Step_Four />;
     } else {
-      return <TellUs />;
+      return <Step_Five />;
     }
   };
 
@@ -38,11 +43,13 @@ const Form = () => {
           style={{
             width:
               page === 0
-                ? "25%"
+                ? "20%"
                 : page === 1
-                ? "50%"
+                ? "40%"
                 : page === 2
-                ? "75%"
+                ? "60%"
+                : page === 3
+                ? "80%"
                 : "100%",
           }}
           className={`bg-[#ecc59d] h-full rounded transition-all duration-500 ease-in`}
@@ -51,15 +58,16 @@ const Form = () => {
       <div>
         <p className="text-[24px] my-5">{heading[page]}</p>
       </div>
-      <form id="myform" onSubmit={handleInputData} className="">
+      <form onSubmit={handleInputData} className="">
         <div>{PageDisplay()}</div>
         <div className="flex gap-2 mt-5">
           {page !== 0 && (
             <button
-              className="bg-white border text-black px-5 py-4 rounded-full"
+              className="bg-white border text-black px-5 py-4 rounded-full flex items-center"
               onClick={() => setPage((currentPage) => currentPage - 1)}
             >
-              Prev
+              <HiChevronLeft className="w-7 h-7" />
+              <span>Back</span>
             </button>
           )}
           {page === heading.length - 1 ? (
