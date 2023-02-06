@@ -11,7 +11,6 @@ const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const scroll = useScrollPosition(50);
-  console.log(scroll);
 
   return (
     <div>

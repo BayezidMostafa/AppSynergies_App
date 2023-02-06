@@ -3,6 +3,8 @@ import { HiChevronLeft } from "react-icons/hi";
 import Step_Five from "./ModaComp/Step_Five";
 import Step_Four from "./ModaComp/Step_Four";
 import Step_One from "./ModaComp/Step_One";
+import Step_Seven from "./ModaComp/Step_Seven";
+import Step_Six from "./ModaComp/Step_Six";
 import Step_Three from "./ModaComp/Step_Three";
 import Step_Two from "./ModaComp/Step_Two";
 
@@ -14,6 +16,8 @@ const Form = () => {
     "Are there any specific technologies you are looking for?",
     "Tell us more about your project",
     "Great! you are almost done",
+    "",
+    "",
   ];
 
   const PageDisplay = () => {
@@ -25,10 +29,16 @@ const Form = () => {
       return <Step_Three />;
     } else if (page === 3) {
       return <Step_Four />;
-    } else {
+    } else if (page === 4) {
       return <Step_Five />;
+    } else if (page === 5) {
+      return <Step_Six />;
+    } else {
+      return <Step_Seven />;
     }
   };
+
+  console.log(page);
 
   const handleInputData = (e) => {
     e.preventDefault();
@@ -43,13 +53,17 @@ const Form = () => {
           style={{
             width:
               page === 0
-                ? "20%"
+                ? "14.28%"
                 : page === 1
-                ? "40%"
+                ? "28.57%"
                 : page === 2
-                ? "60%"
+                ? "42.85%"
                 : page === 3
-                ? "80%"
+                ? "57.13%"
+                : page === 4
+                ? "71.41%"
+                : page === 5
+                ? "85.69%"
                 : "100%",
           }}
           className={`bg-[#ecc59d] h-full rounded transition-all duration-500 ease-in`}

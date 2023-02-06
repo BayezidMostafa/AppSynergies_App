@@ -19,7 +19,7 @@ const Modal = ({ isVisible, onClose }) => {
           />
         </button>
       </div>
-      <div className="min-h-[80vh] w-[95%] mx-auto mt-5 bg-white md:flex justify-between">
+      <div className="min-h-[80vh] w-[95%] mx-auto mt-0 bg-white md:flex justify-between">
         <div className="w-full md:w-[75%] bg-[#F2F2F2]">
           <Form />
         </div>
